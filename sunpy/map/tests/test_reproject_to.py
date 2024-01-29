@@ -121,6 +121,7 @@ def test_invalid_inputs(aia171_test_map, hpc_header):
     with pytest.raises(ValueError, match="The specified algorithm must be one of"):
         aia171_test_map.reproject_to(hpc_header, algorithm='something')
 
+
 def test_deprecated_positional_args(aia_map):
     with pytest.warns(SunpyDeprecationWarning, match=r"Pass annotate=True as keyword args"):
         aia_map.plot(True)
